@@ -26,8 +26,8 @@ body {
   padding: 0;
   font-size: 14px;
   font-family: 'Roboto-Regular';
-  overflow-y: hidden;
-  overflow-x: hidden;
+  /*overflow-y: hidden;
+  overflow-x: hidden;*/
 }
 
 .padding10{
@@ -71,11 +71,18 @@ body {
   font-style: oblique;
 }
 
+.italicize{
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif; 
+  font-style: oblique;
+  text-decoration: underline;
+}
+
 #im {
     position: absolute;
     left: 1%; 
     top: 10%;
-    background-image: url("../images/new.jpg");
+    background-image: url("../images/skyline4.jpg");
     background-repeat: no-repeat;
     height: 30%;
     width: 100%;
@@ -88,12 +95,21 @@ body {
     filter: blur(1px);
 }
 
-#aboutUs{
-  background: url(../images/background.png) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.img-circle {
+    border-radius: 50%;
+}
+
+.team_member{
+  color: #bdbdbd;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.team_member:hover{
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  cursor: pointer;
+  color: black;
 }
 
 #contactInfo{
