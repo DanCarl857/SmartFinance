@@ -2,7 +2,7 @@
 /* global $ */
 
 angular.module('websiteApp')
-  .controller('contactCtrl', ['$scope', function ($scope) {
+  .controller('serviceCtrl', ['$scope', function ($scope) {
   	$(document).ready(function(){
       $('.modal-trigger').leanModal({
       	opacity: .5,

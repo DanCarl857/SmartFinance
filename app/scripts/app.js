@@ -9,13 +9,13 @@
  * Main module of the application.
  */
 angular
-  .module('websiteApp', ['ngAnimate','ngAria','ngSanitize','ui.router', 'ngMap'])
+  .module('websiteApp', ['ngAria','ngSanitize','ui.router', 'ngMap'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('services', {
         url: '/services',
         templateUrl: 'views/services.html',
-        //controller: 'AboutCtrl'
+        controller: 'serviceCtrl'
       })
       .state('welcome', {
         url: '/welcome',
@@ -32,12 +32,13 @@ angular
       .state('about', {
         url: '/about',
         templateUrl: 'views/about.html',
-        // controller: 'aboutCtrl'
+        controller: 'aboutCtrl'
       })
 
       .state('partners', {
         url: '/partners',
-        templateUrl: 'views/partners.html'
+        templateUrl: 'views/partners.html',
+        controller: 'partnerCtrl'
       })
 
       $urlRouterProvider.otherwise('/welcome');

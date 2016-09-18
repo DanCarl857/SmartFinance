@@ -8,10 +8,11 @@
  * Controller of the websiteApp
  */
 angular.module('websiteApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('aboutCtrl', function () {
+    $(document).ready(function(){
+      $('.modal-trigger').leanModal({
+      	opacity: .5,
+      	starting_top: '40%'
+      });
+    });
   });
