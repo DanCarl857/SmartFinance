@@ -12,11 +12,6 @@ angular
   .module('websiteApp', ['ngAnimate','ngAria','ngSanitize','ui.router', 'ngMap'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('/', {
-        templateUrl: 'views/main.html',
-        //controller: 'MainCtrl',
-        //controllerAs: 'main'
-      })
       .state('services', {
         url: '/services',
         templateUrl: 'views/services.html',
@@ -38,6 +33,11 @@ angular
         url: '/about',
         templateUrl: 'views/about.html',
         // controller: 'aboutCtrl'
+      })
+
+      .state('partners', {
+        url: '/partners',
+        templateUrl: 'views/partners.html'
       })
 
       $urlRouterProvider.otherwise('/welcome');
