@@ -1,5 +1,5 @@
 <div>
-	<div class="row" id="navigationBar" style="width: 100%;">
+	<div class="row navbar-fixed" id="navigationBar" style="width: 100%;">
 	  <nav style="background-color: white; color: black; font-size: 10px;">
 	    <div class="nav-wrapper">
 	      <a href="#" class="brand-logo" style="padding-left: 15px;">
@@ -15,22 +15,24 @@
 	        <li><a class="waves-effect waves-light btn light-blue modal-trigger" href="#modal1">Request Demo</a></li>
 	      </ul>
 	      <ul class="side-nav" id="mobile-nav">
-	        <li><a style="color: black" href="sass.html">Sass</a></li>
-	        <li><a style="color: black" href="badges.html">Components</a></li>
-	        <li><a style="color: black" href="collapsible.html">Javascript</a></li>
-	        <li><a style="color: black" href="mobile.html">Mobile</a></li>
+	        <li><a style="color: black" href="#/welcome">Home</a></li>
+	        <li><a style="color: black" href="#/services">What We Offer</a></li>
+	        <li><a style="color: black" href="#/about">About Us</a></li>
+	        <li><a style="color: #03a9f4" href="#/contactUs">Contact Us</a></li>
+	        <li><a style="color: black" href="#/partners">Partners</a></li>
+	        <li><a class="waves-effect waves-light btn light-blue modal-trigger" href="#modal1">Request Demo</a></li>
 	      </ul>
 	    </div>
 	  </nav>
 	</div>
 	<div id="modal1" class="modal">
-		    <div class="modal-content">
-		      <center>
-		      	<h4>Thanks for Requesting a Demo</h4>
-		      	<p>Please contact us at: 6734xxxxxx</p>
-		      </center>
-		    </div>
-  	   </div>
+	    <div class="modal-content">
+	      <center>
+	      	<h4>Thanks for Requesting a Demo</h4>
+	      	<p>Please contact us at: 6734xxxxxx</p>
+	      </center>
+	    </div>  
+  	</div>
 	<div class="row col s12" style="width: 80%;">
 		<div class="col s7 right">
 			<div map-lazy-load="https://maps.google.com/maps/api/js" style="background-color: #ededed;">
@@ -52,39 +54,49 @@
 			<form class="col s12" id="contactUsForm">
 		      <div class="row">
 		        <div class="input-field col s6">
-		          <input id="first_name" type="text" class="validate">
+		          <input id="first_name" type="text" ng-model="firstName" class="validate">
 		          <label for="first_name">First Name</label>
 		        </div>
 		        <div class="input-field col s6">
-		          <input id="last_name" type="text" class="validate">
+		          <input id="last_name" type="text" ng-model="lastName" class="validate">
 		          <label for="last_name">Last Name</label>
 		        </div>
 		      </div>
 		      <div class="row">
 		        <div class="input-field col s12">
-		          <input id="subject" type="text" class="validate">
+		          <input id="subject" type="text" ng-model="subject" class="validate">
 		          <label for="subject">Subject</label>
 		        </div>
 		      </div>
 		      <div class="row">
 		        <div class="input-field col s12">
-		          <input id="email" type="email" class="validate">
+		          <input id="email" type="email" ng-model="email" class="validate">
 		          <label for="email">Email</label>
 		        </div>
 		      </div>
 		      <div class="row">
 		        <div class="input-field col s12">
-		          <textarea id="textarea1" class="materialize-textarea"></textarea>
-		          <label for="textarea1">Textarea</label>
+		          <textarea id="textarea1" ng-model="description" class="materialize-textarea"></textarea>
+		          <label for="textarea1">Description</label>
         		</div>
      		 </div>
      		 <div class="row">
-                  <a class="btn waves-effect waves-light red darken-1 left" ng-click="$root.goBack()">Cancel</a>
-                  <button class="btn waves-effect waves-light light-green darken-2 right">Submit</button>
+                  <a class="btn waves-effect waves-light red darken-1 left" ng-click="clearForm()">Cancel</a>
+                  <button class="btn waves-effect waves-light light-green darken-2 right" ng-click="contactSky()">Submit</button>
               </div>
     		</form>
+  	</div>
 		</div>
-	</div>
+	<div id="contactModal" class="modal" style="z-index: 1000">
+               <div class="modal-content">
+                 <span style="font-size: 25px;">Please wait....Processing request</span>
+               </div>
+               <div class="modal-footer">
+                 <div class="progress">
+                   <div class="indeterminate"></div>
+                 </div>
+               </div>
+           </div>
 	<div class="row italicize" style="position: absolute; top: 98  %;font-size: 16px; text-decoration: none;left: 0%;">
   		<center>
   			Built and Designed by: <a href="https://github.com/DanCarl857" target="_blank">Daniel Carlson</a>
