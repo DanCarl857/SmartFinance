@@ -10,7 +10,7 @@
  */
 angular
   .module('websiteApp', ['ngAria','ngSanitize','ui.router', 'ngMap'])
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
       .state('services', {
         url: '/services',
